@@ -43,6 +43,34 @@
       width: 160px;
       height: 160px;
     }
+    .card-custom {
+      border-radius: 2px;
+      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .card-img-top {
+      filter: contrast(70%);
+      transition: filter 0.5s ease;
+    }
+    .card-custom:hover .card-img-top {
+      filter: contrast(100%);
+    }
+    .card-title {
+      color: #696969;
+      font-size: 1.25rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .card-text {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+    .btn-lowercase {
+      text-transform: lowercase;
+    }
   </style>
 </head>
 <body class="bg-dark text-white" style="font-family: 'Poppins', sans-serif;">
@@ -87,9 +115,6 @@
             </li>
             <li class="nav-item mx-2">
               <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -158,13 +183,13 @@
         </div>
         <h5>JavaScript</h5>
       </div>
-      <div class="col-md-3">
+      <div class="col-6 col-md-3">
         <div class="logo-box">
           <img src="imgs/SQL.png">
         </div>
         <h5>SQL</h5>
       </div>
-      <div class="col-md-3">
+      <div class="col-6 col-md-3">
         <div class="logo-box">
           <img src="imgs/Django.png">
         </div>
@@ -212,59 +237,60 @@
         <div class="border-bottom mx-auto" style="width: 350px; height: 2px;"></div>
       </div>
     </div>
-    <div class="row">
+    <!--div class="row">
       <div class="d-grid gap-2 col-6 mx-auto py-3">
         <a href="https://mariane19.github.io/A02/" class="btn btn-light mb-1" type="button">Puerto Galera Site</a>
         <a href="https://mariane19.github.io/MP1/" class="btn btn-light mb-1" type="button">HVideo Integration</a>
         <a href="https://mariane19.github.io/A04/" class="btn btn-light mb-1" type="button">API Json Return</a>
         <a href="https://mariane19.github.io/MP3/404.html" class="btn btn-light mb-1" type="button">Error 404</a>
       </div>
-    </div>
+    </div-->
   </div>
 
-  <div class="container" id="contact">
-    <div class="row align-items-center text-center gx-3 gy-5 py-2 mt-0">
-      <div class="col-12 text-center order-first order-lg-1">
-        <h2 class="fw-bold fs-1 pb-2">Contact</h2>
-        <div class="border-bottom mx-auto" style="width: 350px; height: 2px;"></div>
-      </div>
-    </div>
-    <div class="row align-items-center justify-content-center py-5">
-      <div class="col-lg-9 m-auto">
-        <div class="row">
-          <div class="col-md-6">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="mariane">
-              </div>
-              <div class="mb-3">
-                <label for="lastName" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="carandang">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="marianecarandang@gmail.com">
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-light">Send</button>
-            </form>
-          </div>
-          <div class="col-lg-4 px-3">
-            <h5 class="fw-bold pt-3 fs-3">Experience in</h5>
-            <p class="fs-5">HTML, JavaScript, PHP, Bootstrap, MySQL</p>
-            <h5 class="fw-bold mt-4 fs-3">Around the WEB</h5>
-            <div class="d-flex gap-2">
-              <i class="fa-brands fa-facebook fa-2x"></i>
-              <i class="fa-brands fa-instagram fa-2x"></i>
-              <i class="fa-brands fa-linkedin fa-2x"></i>
-            </div>
+  <div class="container my-4">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card card-custom h-100">
+          <img src="imgs/puerto-galera.png" class="card-img-top">
+          <div class="card-body flex-custom">
+            <h5 class="card-title">Puerto Galera Site</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, eos? Voluptate excepturi harum illo, pariatur molestiae itaque maxime cumque vel earum sed nam dicta deleniti et iusto minus beatae maiores!</p>
+            <a href="https://mariane19.github.io/A02/" class="btn btn-outline-secondary btn-lowercase w-100">View</a>
           </div>
         </div>
       </div>
+      <div class="col-md-4">
+        <div class="card card-custom h-100">
+          <img src="imgs/hvideo-integration.png" class="card-img-top">
+          <div class="card-body flex-custom">
+            <h5 class="card-title">HVideo Integration</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, eos? Voluptate excepturi harum illo, pariatur molestiae itaque maxime cumque vel earum sed nam dicta deleniti et iusto minus beatae maiores!</p>
+            <a href="https://mariane19.github.io/MP1/" class="btn btn-outline-secondary btn-lowercase w-100">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-custom h-100">
+          <img src="imgs/api-json-return.png" class="card-img-top">
+          <div class="card-body flex-custom">
+            <h5 class="card-title">API Json Return</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, eos? Voluptate excepturi harum illo, pariatur molestiae itaque maxime cumque vel earum sed nam dicta deleniti et iusto minus beatae maiores!</p>
+            <a href="https://mariane19.github.io/A04/" class="btn btn-outline-secondary btn-lowercase w-100">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-custom h-100">
+          <img src="imgs/background.jpg" class="card-img-top">
+          <div class="card-body flex-custom">
+            <h5 class="card-title">Project 4</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, eos? Voluptate excepturi harum illo, pariatur molestiae itaque maxime cumque vel earum sed nam dicta deleniti et iusto minus beatae maiores!</p>
+            <button class="btn btn-outline-secondary btn-lowercase w-100">View</button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
